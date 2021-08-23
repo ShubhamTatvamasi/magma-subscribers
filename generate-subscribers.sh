@@ -10,7 +10,7 @@ SERVICE=ACTIVE
 DATA_PLAN=default
 APN=default
 
-for i in $(seq -f "%010g" 1 ${TOTAL_SUBSCRIBERS})
+for i in $(seq -f "%010g" ${TOTAL_SUBSCRIBERS})
 do
   IMSI=IMSI${MCC}${MNC}${i}
   echo ${IMSI},${IMSI},${KEY},${OPC},${SERVICE},${DATA_PLAN},${APN}
